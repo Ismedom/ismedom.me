@@ -1,9 +1,7 @@
-"use client";
-import React, { useState } from "react";
+
+import React from "react";
 import { motion } from "framer-motion";
 import { cn } from "../../lib/utils";
-import { Link } from "react-router-dom";
-
 
 export const PinContainer = ({
     children,
@@ -18,16 +16,6 @@ export const PinContainer = ({
     className?: string;
     containerClassName?: string;
 }) => {
-    const [transform, setTransform] = useState(
-        "translate(-50%,-50%) rotateX(0deg)"
-    );
-
-    const onMouseEnter = () => {
-        setTransform("translate(-50%,-50%) rotateX(40deg) scale(0.8)");
-    };
-    const onMouseLeave = () => {
-        setTransform("translate(-50%,-50%) rotateX(0deg) scale(1)");
-    };
 
     return (
         <div
@@ -36,8 +24,7 @@ export const PinContainer = ({
                 "group/pin cursor-pointer",
                 containerClassName
             )}
-            onMouseEnter={onMouseEnter}
-            onMouseLeave={onMouseLeave}
+
             data-aos="fade-up"
         >
             <div

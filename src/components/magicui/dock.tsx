@@ -1,5 +1,3 @@
-
-
 import { cva, type VariantProps } from "class-variance-authority";
 import {
   motion,
@@ -11,7 +9,6 @@ import {
 } from "motion/react";
 import React, { PropsWithChildren, useRef } from "react";
 import { cn } from "../../utils/cn";
-
 
 export interface DockProps extends VariantProps<typeof dockVariants> {
   className?: string;
@@ -48,12 +45,12 @@ const Dock = React.forwardRef<HTMLDivElement, DockProps>(
     const renderChildren = () => {
       return React.Children.map(children, (child) => {
         if (React.isValidElement(child) && child.type === DockIcon) {
-          return React.cloneElement(child, {
-            ...child.props,
-            mouseX: mouseX,
+          return React.cloneElement(child as React.ReactElement<DockIconProps>, {
+            mouseX,
             size: iconSize,
             magnification: iconMagnification,
             distance: iconDistance,
+            ...((child as React.ReactElement<DockIconProps>).props as any),
           });
         }
         return child;
