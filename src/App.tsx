@@ -13,21 +13,22 @@ export function App() {
       offset: 100,
       duration: 1000,
       easing: 'ease-in-out',
-      // delay: 50,
     });
 
   }, [])
   return (
     <BrowserRouter>
       <Routes>
+
         <Route path="/" element={<AppLayout />} >
           <Route index element={<Home />} />
           <Route path="projects" element={<Project />} />
           {/* <Route path="services" element={<Services />} /> */}
           {/* <Route path="contact" element={<Contact />} /> */}
+
         </Route>
       </Routes>
-    </BrowserRouter >
+    </BrowserRouter>
   );
 }
 
