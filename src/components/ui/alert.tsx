@@ -12,12 +12,6 @@ export default function MobileAlert({ onClose }: {
         localStorage.setItem('hasSeenMobileAlert', 'true');
     };
 
-
-    const handleLeave = () => {
-        window.location.href = 'https://final-portforlio-one.vercel.app/';
-    };
-
-
     const handleFadeOut = () => {
         document.querySelector('.mobile-alert')?.classList.add('animate-fade-out');
         setTimeout(() => {
@@ -27,7 +21,7 @@ export default function MobileAlert({ onClose }: {
     if (!isVisible) return null;
 
     return (
-        <div className="fixed z-[1010] inset-0 px-10 bg-black/80 flex justify-center items-center">
+        <div className="fixed z-[1010] inset-0 px-10 bg-black/40 flex justify-center items-center rounded-md">
             <div
                 className={`animate-fade-in mobile-alert max-w-[400px]`}
                 onAnimationEnd={(e) => {
@@ -43,7 +37,7 @@ export default function MobileAlert({ onClose }: {
                                     Mobile Device Detected
                                 </div>
                                 <p className="mt-2 text-sm text-gray-400 leading-relaxed">
-                                    You're accessing this website on a mobile device. While the site is functional, some animations and features may be limited to ensure smooth performance. Would you like to continue or explore other options?
+                                    You're on a mobile device. Some animations, high-resolution visuals, and interactive effects may be disabled for better performance.
                                 </p>
                             </div>
                             <button
@@ -60,12 +54,6 @@ export default function MobileAlert({ onClose }: {
                                 className="px-4 py-2 rounded-md bg-violet-600 hover:bg-violet-700 text-white font-medium transition-colors text-sm flex-1"
                             >
                                 I'll Stay Here
-                            </button>
-                            <button
-                                onClick={handleLeave}
-                                className="px-4 py-2 rounded-md border border-slate-600 hover:bg-slate-700/50 text-gray-300 font-medium transition-colors text-sm flex-1"
-                            >
-                                Give Me Instead
                             </button>
                         </div>
                     </div>

@@ -1,100 +1,79 @@
-import HTML from "../assets/techIcons/html-5.png";
-import CSS from "../assets/techIcons/css-3.png";
-import JavaScript from "../assets/techIcons/js.png";
-import TypeScript from "../assets/techIcons/typescript.png";
-import React from "../assets/techIcons/atom.png";
-import Node from "../assets/techIcons/node-js.png";
-import Express from "../assets/techIcons/Express.png";
-import MongoDB from "../assets/techIcons/icons8-mongodb.svg";
-import GitHub from "../assets/techIcons/github.png";
-import Tailwind from "../assets/techIcons/tailwindcss.png";
-import Nextjs from "../assets/techIcons/nextjs-icon-dark-background.png";
-import Vuejs from "../assets/techIcons/vue.js.png";
-import Nuxtjs from "../assets/techIcons/nuxtjs.png";
-import posgreSQL from "../assets/techIcons/posgresql.png";
-import Figma from "../assets/techIcons/figma.png";
-import Git from "../assets/techIcons/git.png";
-import Nestjs from "../assets/techIcons/nestjs.png";
-import PHP from "../assets/techIcons/php.png";
-import Laravel from "../assets/techIcons/pngwing.com (2).png";
-
-
 const TECH_STACK_AND_TOOLS = [
-    {
-        name: "HTML",
-        logo: HTML,
-    },
-    {
-        name: "CSS",
-        logo: CSS,
-    },
+    // {
+    //     name: "HTML",
+    //     logo: () => import("../assets/techIcons/html-5.png"),
+    // },
+    // {
+    //     name: "CSS",
+    //     logo: () => import("../assets/techIcons/css-3.png"),
+    // },
     {
         name: "Tailwind CSS",
-        logo: Tailwind,
+        logo: () => import("../assets/techIcons/tailwindcss.png"),
     },
     {
         name: "JavaScript",
-        logo: JavaScript,
+        logo: () => import("../assets/techIcons/js.png"),
     },
     {
         name: "TypeScript",
-        logo: TypeScript,
+        logo: () => import("../assets/techIcons/typescript.png"),
     },
     {
-        name: "Reactjs",
-        logo: React,
+        name: "React JS",
+        logo: () => import("../assets/techIcons/atom.png"),
     },
     {
-        name: "Vuejs",
-        logo: Vuejs,
+        name: "Vue JS",
+        logo: () => import("../assets/techIcons/vue.js.png"),
     },
     {
-        name: "Nextjs",
-        logo: Nextjs,
+        name: "Next JS",
+        logo: () => import("../assets/techIcons/nextjs-icon-dark-background.png"),
     },
     {
-        name: "Nuxtjs",
-        logo: Nuxtjs,
+        name: "Nuxt JS",
+        logo: () => import("../assets/techIcons/nuxtjs.png"),
     },
-    {
-        name: "Node.js",
-        logo: Node,
-    },
-    {
-        name: "PHP",
-        logo: PHP,
-    },
+    // {
+    //     name: "Node.js",
+    //     logo: () => import("../assets/techIcons/node-js.png"),
+    // },
+    // {
+    //     name: "PHP",
+    //     logo: () => import("../assets/techIcons/php.png"),
+    // },
     {
         name: "Laravel",
-        logo: Laravel,
+        logo: () => import("../assets/techIcons/pngwing.com (2).png"),
     },
     {
         name: "Express",
-        logo: Express,
+        logo: () => import("../assets/techIcons/Express.png"),
     },
     {
-        name: "Nest.js",
-        logo: Nestjs,
+        name: "Nest JS",
+        logo: () => import("../assets/techIcons/nestjs.png"),
     },
     {
         name: "MongoDB",
-        logo: MongoDB,
+        logo: () => import("../assets/techIcons/icons8-mongodb.svg"),
     },
     {
-        name: "PosgreSQL",
-        logo: posgreSQL,
+        name: "PostgreSQL",
+        logo: () => import("../assets/techIcons/posgresql.png"),
     },
     {
         name: "Git",
-        logo: Git,
+        logo: () => import("../assets/techIcons/git.png"),
     },
     {
         name: "GitHub",
-        logo: GitHub,
+        logo: () => import("../assets/techIcons/github.png"),
     },
     {
         name: "Figma",
-        logo: Figma,
+        logo: () => import("../assets/techIcons/figma.png"),
     },
 ];
 

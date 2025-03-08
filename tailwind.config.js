@@ -66,7 +66,23 @@ module.exports = {
           '4': 'hsl(var(--chart-4))',
           '5': 'hsl(var(--chart-5))'
         }
-      }
+      },
+      animation: {
+        slide: 'slide 2s infinite ease-in-out alternate',
+        rotate: 'rotate 2s infinite ease-in-out',
+      },
+      keyframes: {
+        slide: {
+          '0%, 100%': { bottom: '-35px' },
+          '25%, 75%': { bottom: '-2px' },
+          '20%, 80%': { bottom: '2px' },
+        },
+      },
+      rotate: {
+        '0%': { transform: 'rotate(-15deg)' },
+        '25%, 75%': { transform: 'rotate(0deg)' },
+        '100%': { transform: 'rotate(25deg)' },
+      },
     }
   },
   plugins: [
