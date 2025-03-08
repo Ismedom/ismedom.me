@@ -4,9 +4,7 @@ import { PinContainer } from "../components/ui/3d-pin";
 import { BackgroundGradient } from "../components/ui/background-gradient";
 import { FlipWords } from "../components/ui/flip-words";
 import ImgLoading from "../components/ui/img-loading";
-import { COLOR_TYPE } from "../constants/color";
 import TECH_STACK_AND_TOOLS from "../data/tech";
-import { randColorClass } from "../functions/random";
 
 
 function Home() {
@@ -19,7 +17,8 @@ function Home() {
                         <h1 className="text-4xl sm:text-5xl font-bold mb-3" data-aos="fade-left">Hello, My name's Devon</h1>
                     </div>
                     <div className="over-layer-text flex" data-aos="fade-up">
-                        I'm a <FlipWords words={words} color={randColorClass(undefined, COLOR_TYPE.TEXT_COLOR)} />developer
+                        I'm a <FlipWords words={words} />developer
+
                     </div>
                     <div className="layer-text" data-aos="fade-up">
                         I enjoy creating websites and applications that are both beautiful and efficient. I’m always learning new technologies and looking for exciting challenges. If you’d like to collaborate or just talk about coding, feel free to reach out!
