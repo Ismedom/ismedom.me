@@ -13,11 +13,11 @@ function NavBar() {
     return (
         <div className="relative">
             <Dock direction="middle" className="hover:shadow-md border-none text-gray-400 hover:text-gray-300">
-                <Link className="text-gray-400" to='https://github.com/Ismedom' >
+                {/* <Link className="text-gray-400" to='https://github.com/Ismedom' >
                     <DockIcon>
                         <Home />
                     </DockIcon>
-                </Link>
+                </Link> */}
                 <Link className="text-gray-400" to='https://github.com/Ismedom' target="_blank">
                     <DockIcon>
                         <Github />
