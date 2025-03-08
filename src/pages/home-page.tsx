@@ -1,9 +1,12 @@
 
+import LazyImage from "../components/img/lazy-img";
 import { PinContainer } from "../components/ui/3d-pin";
 import { BackgroundGradient } from "../components/ui/background-gradient";
 import { FlipWords } from "../components/ui/flip-words";
+import ImgLoading from "../components/ui/img-loading";
+import { COLOR_TYPE } from "../constants/color";
 import TECH_STACK_AND_TOOLS from "../data/tech";
-import randomColor from "../functions/randomColor";
+import { randColorClass } from "../functions/random";
 
 
 function Home() {
@@ -16,7 +19,7 @@ function Home() {
                         <h1 className="text-4xl sm:text-5xl font-bold mb-3" data-aos="fade-left">Hello, My name's Devon</h1>
                     </div>
                     <div className="over-layer-text flex" data-aos="fade-up">
-                        I'm a <FlipWords words={words} color={randomColor()} />developer
+                        I'm a <FlipWords words={words} color={randColorClass(undefined, COLOR_TYPE.TEXT_COLOR)} />developer
                     </div>
                     <div className="layer-text" data-aos="fade-up">
                         I enjoy creating websites and applications that are both beautiful and efficient. I’m always learning new technologies and looking for exciting challenges. If you’d like to collaborate or just talk about coding, feel free to reach out!
@@ -39,17 +42,14 @@ function Home() {
                 </div>
 
             </div>
-            {/* <div className="mt-8 mb-2">
-                <h2 className="relative z-20 text-3xl font-bold text-center text-gray-400">Tech Stack and Tools</h2>
-            </div> */}
             <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-8 my-6">
                 {TECH_STACK_AND_TOOLS.map((tech, index) => (
                     <PinContainer key={index} title={tech.name} href="" className="w-full rounded-lg" containerClassName="layer-text">
                         <div className="flex flex-col items-center justify-center w-32 h-32 bg-gradient-to-br" >
                             <div className="w-20 flex items-center justify-center">
-                                <img
-                                    className="w-14 object-contain p-2"
-                                    src={tech.logo}
+                                <LazyImage
+                                    LoadingComponent={<ImgLoading />}
+                                    loadImage={tech.logo}
                                     alt={tech.name}
                                 />
                             </div>
