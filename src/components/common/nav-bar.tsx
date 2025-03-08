@@ -1,7 +1,7 @@
 
 import React from "react";
 import { Dock, DockIcon } from "../magicui/dock";
-import { Facebook, Github, Home } from "lucide-react";
+import { Facebook, Github } from "lucide-react";
 import { Link } from "react-router-dom";
 
 
