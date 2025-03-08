@@ -1,4 +1,3 @@
-"use client";
 import { useCallback, useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "../../lib/utils";
@@ -7,12 +6,10 @@ export const FlipWords = ({
     words,
     duration = 3000,
     className,
-    color = 'text-gray-200',
 }: {
     words: string[];
     duration?: number;
     className?: string;
-    color?: string;
 }) => {
     const [currentWord, setCurrentWord] = useState(words[0]);
     const [isAnimating, setIsAnimating] = useState<boolean>(false);
@@ -85,7 +82,7 @@ export const FlipWords = ({
                                     delay: wordIndex * 0.3 + letterIndex * 0.05,
                                     duration: 0.2,
                                 }}
-                                className={`inline-block ${color}`}
+                                className={`inline-block`}
                             >
                                 {letter}
                             </motion.span>

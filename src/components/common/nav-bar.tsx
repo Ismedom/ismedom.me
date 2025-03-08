@@ -1,7 +1,6 @@
 
 import React from "react";
 import { Dock, DockIcon } from "../magicui/dock";
-import { HomeIcon } from "@heroicons/react/24/outline";
 import { Facebook, Github } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -14,11 +13,11 @@ function NavBar() {
     return (
         <div className="relative">
             <Dock direction="middle" className="hover:shadow-md border-none text-gray-400 hover:text-gray-300">
-                <Link className="text-gray-400" to="/">
+                {/* <Link className="text-gray-400" to='https://github.com/Ismedom' >
                     <DockIcon>
-                        <HomeIcon />
+                        <Home />
                     </DockIcon>
-                </Link>
+                </Link> */}
                 <Link className="text-gray-400" to='https://github.com/Ismedom' target="_blank">
                     <DockIcon>
                         <Github />
